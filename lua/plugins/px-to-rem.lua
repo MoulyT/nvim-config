@@ -1,1 +1,1 @@
-return { "Oldenborg/vim-px-to-rem" }
+return { "Oldenborg/vim-px-to-rem", event = "VeryLazy" }
