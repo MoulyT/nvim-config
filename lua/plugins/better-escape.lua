@@ -3,7 +3,7 @@ return {
     "max397574/better-escape.nvim",
     config = function()
       require("better_escape").setup({
-        timeout = vim.o.timeoutlen, -- Usar el timeoutlen de vim
+        timeout = vim.o.timeoutlen,
         mappings = {
           i = {
             j = {
@@ -13,8 +13,22 @@ return {
           },
           t = {
             j = {
-              k = "<C-\\><C-n>",
-              j = "<C-\\><C-n>",
+              k = function()
+                local bufname = vim.api.nvim_buf_get_name(0)
+                if bufname:match("lazygit") then
+                  return "k"
+                end
+
+                return "<C-\\><C-n>"
+              end,
+              j = function()
+                local bufname = vim.api.nvim_buf_get_name(0)
+                if bufname:match("lazygit") then
+                  return "j"
+                end
+
+                return "<C-\\><C-n>"
+              end,
             },
           },
         },
