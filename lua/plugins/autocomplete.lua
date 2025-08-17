@@ -19,5 +19,28 @@ return {
       documentation = { window = { border = "single" } },
     },
     signature = { window = { border = "single" } },
+    fuzzy = {
+      implementation = "prefer_rust_with_warning",
+      -- sorts = {
+      --   "exact",
+      --   "score",
+      --   "sort_text",
+      -- },
+    },
+    snippets = {
+      preset = "luasnip",
+    },
+    sources = {
+      default = { "copilot" },
+      providers = {
+        copilot = {
+          name = "copilot",
+          module = "blink-cmp-copilot",
+          kind = "Copilot",
+          score_offset = 10,
+          async = true,
+        },
+      },
+    },
   },
 }

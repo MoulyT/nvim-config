@@ -1,0 +1,76 @@
+{
+  "React TypeScript Component": {
+    "prefix": "rc",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}} = ({ $2 }: ${1:${TM_FILENAME_BASE}}Props) => {",
+      "  $0",
+      "  return (",
+      "    <div>",
+      "      mouly",
+      "    </div>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "Crea un componente de React con TypeScript"
+  },
+  "useState Hook": {
+    "prefix": "us",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${0});"
+    ],
+    "description": "Añade un hook useState con capitalización automática"
+  },
+  "useEffect Hook": {
+    "prefix": "ue",
+    "body": [
+      "useEffect(function $1 {",
+      "  $0",
+      "}, []);"
+    ],
+    "description": "Añade un hook useEffect con posible cleanup"
+  },
+  "Custom React Hook": {
+    "prefix": "ch",
+    "body": [
+      "export const use${1:CustomHook} = (${2:params}:Props) => {",
+      "  $0",
+      "  ",
+      "  return {",
+      "    ${3:returnValues}",
+      "  };",
+      "};"
+    ],
+    "description": "Crea un hook personalizado"
+  },
+  "Console log": {
+    "prefix": "cl",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "Console log básico"
+  },
+  "Console log con valor etiquetado": {
+    "prefix": "clm",
+    "body": [
+      "console.log('$1:', $1);"
+    ],
+    "description": "Console log que muestra el nombre de la variable y su valor"
+  },
+  "Console table": {
+    "prefix": "ct",
+    "body": [
+      "console.table($1);"
+    ],
+    "description": "Muestra datos tabulares como una tabla"
+  },
+  "If básico": {
+    "prefix": "if",
+    "body": [
+      "if ($1) {",
+      "\t$2",
+      "}"
+    ],
+    "description": "Declaración if básica"
+  }
+}
