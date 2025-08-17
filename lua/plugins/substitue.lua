@@ -1,6 +1,7 @@
 return {
   {
     "gbprod/substitute.nvim",
+    enabled = false,
     keys = {
       -- Sustituciones básicas
       { "R", "<cmd>lua require('substitute').operator()<cr>", desc = "Substitute with motion" },
