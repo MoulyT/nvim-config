@@ -1,0 +1,21 @@
+return {
+  {
+    "MagicDuck/grug-far.nvim",
+    keys = {
+      {
+        "<leader>sf",
+        function()
+          local grug = require("grug-far")
+          grug.open({
+            transient = true,
+            prefills = {
+              paths = vim.fn.expand("%"),
+            },
+          })
+        end,
+        mode = { "n", "v" },
+        desc = "Search and Replace in Current File",
+      },
+    },
+  },
+}
